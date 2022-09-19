@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="result">
+    <p id="result-box">{{result}}</p>
+  </div>
+      <div class="buttons">
+      <button neo-button class="action-btn" id="clear" id="clear"> AC </button>
+      <button neo-button class="action-btn"> MC</button>
+      <button neo-button class="num-button  action-btn"> %</button>
+      <button neo-button class="num-button  calc-action-btn"> /</button>
+      <button neo-button class="num-button seven">7</button>
+      <button neo-button class="num-button eight">8</button>
+      <button neo-button class="num-button  nine">9</button>
+      <button neo-button class="num-button  calc-action-btn">*</button>
+      <button neo-button class="num-button  four">4</button>
+      <button neo-button class="num-button  five">5</button>
+      <button neo-button class="num-button  six">6</button>
+      <button neo-button class="num-button  calc-action-btn">-</button>
+      <button neo-button class="num-button  one">1</button>
+      <button neo-button class="num-button  two">2</button>
+      <button neo-button class="num-button  three">3</button>
+      <button neo-button class="num-button  calc-action-btn">+</button>
+      <button neo-button class="num-button  zero">0</button>
+      <app-botoes classe="num-button" value="." (click)="clicou($event.target.value)">.</app-botoes>
+      <button neo-button class="calc-action-btn" id="total">=</button>
+    </div>
+</div>
