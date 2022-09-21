@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from "@angular/core";
 
 @Component({
   selector: 'app-botoes',
@@ -10,12 +10,12 @@ export class BotoesComponent implements OnInit {
   constructor () { }
   @Input() classe: string;
   @Input() value: number | string;
-  @Output()
+  @Output('digitou') digitou = new EventEmitter();
   ngOnInit(): void {
   }
 
   clicou(event) {
-    console.log(event.value)
-    console.log(this.value)
+    console.log(event)
+    this.digitou.emit({ valorDigitado: event })
   }
 }

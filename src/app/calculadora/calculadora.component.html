@@ -3,24 +3,31 @@
     <p id="result-box">{{result}}</p>
   </div>
       <div class="buttons">
-      <button neo-button class="action-btn" id="clear" id="clear"> AC </button>
-      <button neo-button class="action-btn"> MC</button>
-      <button neo-button class="num-button  action-btn"> %</button>
-      <button neo-button class="num-button  calc-action-btn"> /</button>
-      <button neo-button class="num-button seven">7</button>
-      <button neo-button class="num-button eight">8</button>
-      <button neo-button class="num-button  nine">9</button>
-      <button neo-button class="num-button  calc-action-btn">*</button>
-      <button neo-button class="num-button  four">4</button>
-      <button neo-button class="num-button  five">5</button>
-      <button neo-button class="num-button  six">6</button>
-      <button neo-button class="num-button  calc-action-btn">-</button>
-      <button neo-button class="num-button  one">1</button>
-      <button neo-button class="num-button  two">2</button>
-      <button neo-button class="num-button  three">3</button>
-      <button neo-button class="num-button  calc-action-btn">+</button>
-      <button neo-button class="num-button  zero">0</button>
-      <app-botoes classe="num-button" value="." (click)="clicou($event.target.value)">.</app-botoes>
-      <button neo-button class="calc-action-btn" id="total">=</button>
+
+      <app-botoes classe="num-button " value="AC" (click)="clear()"></app-botoes>
+      <app-botoes classe="num-button " (digitou)="OnMudouValor($event)"  value="MC"></app-botoes>
+      <app-botoes classe="num-button " (digitou)="OnMudouValor($event)"  value="%"></app-botoes>
+      <app-botoes classe="num-button calc-action-btn" (digitou)="OnMudouValor($event)"  value="/">/</app-botoes>
+
+      <app-botoes classe="num-button " (digitou)="OnMudouValor($event)"  value="7"></app-botoes>
+      <app-botoes classe="num-button " (digitou)="OnMudouValor($event)"  value="8"></app-botoes>
+      <app-botoes classe="num-button " (digitou)="OnMudouValor($event)"  value="9"></app-botoes>
+      <app-botoes classe="num-button calc-action-btn" (digitou)="OnMudouValor($event)"  value="*">*</app-botoes>
+
+      <app-botoes classe="num-button " (digitou)="OnMudouValor($event)"  value="4"></app-botoes>
+      <app-botoes classe="num-button " (digitou)="OnMudouValor($event)"  value="5"></app-botoes>
+      <app-botoes classe="num-button " (digitou)="OnMudouValor($event)"  value="6"></app-botoes>
+      <app-botoes classe="num-button calc-action-btn" (digitou)="OnMudouValor($event)"  value="-">-</app-botoes>
+
+      <app-botoes classe="num-button " (digitou)="OnMudouValor($event)"  value="1"></app-botoes>
+      <app-botoes classe="num-button " (digitou)="OnMudouValor($event)"  value="2"></app-botoes>
+      <app-botoes classe="num-button " (digitou)="OnMudouValor($event)"  value="3"></app-botoes>
+      <app-botoes classe="num-button calc-action-btn"  (digitou)="OnMudouValor($event)"  value="+">+</app-botoes>
+
+      <app-botoes classe="num-button zero" class="zero" (digitou)="OnMudouValor($event)"  value="0">0</app-botoes>
+      <app-botoes classe="num-button" (digitou)="OnMudouValor($event)" value="." >.</app-botoes>
+      <app-botoes classe="num-button" (click)="calc()" value="=" id="total"></app-botoes>
+
+
     </div>
 </div>
